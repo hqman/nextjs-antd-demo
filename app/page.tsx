@@ -11,7 +11,7 @@ interface DataType {
   name: string;
   age: number;
   address: string;
-  tags: string[];
+  tags: number[];
 }
 
 const columns: TableProps<DataType>['columns'] = [
@@ -86,13 +86,20 @@ const data: DataType[] = [
     tags: ['cool', 'teacher'],
   },
 ];
-const Home = () => (
-  <div className="App flex flex-col items-center justify-center min-h-screen">
-    <h1 className="text-2xl font-bold mb-4 text-violet-600 mt-4">Antd Table Demo</h1>
-    <div className="p-4 bg-gray-100 rounded-lg shadow-md">
-      <Table<DataType> columns={columns} dataSource={data} />
+
+const Home = () => {
+  return (
+    <div className="App flex flex-col items-center justify-center min-h-screen">
+      <h1 className="text-2xl font-bold mb-4 text-violet-600 mt-4">Antd Table Demo</h1>
+      <div className="p-4 bg-gray-100 rounded-lg shadow-md">
+        <Table<DataType> columns={columns} dataSource={data} />
+      </div>
+      <div>
+        <h1>故意制造的 TypeScript 类型错误</h1>
+        <pre>{JSON.stringify(data, null, 2)}</pre>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Home;

@@ -1,0 +1,20 @@
+---
+description: ts
+globs: *.ts
+---
+
+# Your rule content
+
+Description Always stay updated on the _masonfolder
+
+Globs: /*
+
+
+
+\# Main file
+
+Use the u/how-mason-works.md file to understand how mason\_cli works
+
+Use the u/mason-folder-structure.md file to get an idea of structure and usage
+
+check the u/bricklink.md for repository and documentation
